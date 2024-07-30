@@ -33,19 +33,26 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.3s;
+}
+
+.navbar.sticky {
+    height: 8rem;
+    background-color: #fff;
+    box-shadow: 0 1rem 10rem rgba(130, 162, 235, 0.6);
 }
  
 /* logo */
-.logo{
+.logo {
     display: flex;
     flex-direction: column;
 }
  
-.logo span{
+.logo span {
     text-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
 }
  
-.logo span:nth-child(1){
+.logo span:nth-child(1) {
     font-family: "Mooli", cursive;
     font-size: 3rem;
     font-weight: bold;
@@ -68,6 +75,11 @@ html {
     text-align: right;
     transform: translate(2.2rem, -1rem);
 }
+
+.sticky .logo span {
+    color: #092627;
+    text-shadow: none;
+}
 /* End of logo */
 /* Nav Items */
 .nav-items{
@@ -82,7 +94,7 @@ html {
     position: relative;
 }
 
-.nav-item::after {
+.nav-item:not(:last-child)::after {
     content: '';
     position: absolute;
     top: 2.9rem;
@@ -99,6 +111,10 @@ html {
     opacity: 1;
     visibility: visible;
 }
+
+.sticky .nav-item::after {
+    top: 6rem;
+}
  
 .nav-link {
     font-size: 2rem;
@@ -108,10 +124,15 @@ html {
     text-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
 }
 
+.sticky .nav-link {
+    color: #092627;
+    text-shadow: none;
+}
+
 /* Dropdown 1 */
 .dropdown {
     position: absolute;
-    top: 4.9rem;
+    top: 4.8rem;
     background-color: #fff;
     border-radius: 1rem;
     box-shadow: 0 1rem 3rem rgba(0,0,0,0.2);
@@ -124,6 +145,11 @@ html {
 .nav-item:hover .dropdown {
     opacity: 1;
     visibility: visible;
+}
+
+.sticky .dropdown {
+    top: 8rem;
+    box-shadow: 0 1rem 10rem rgba(130, 162, 235, 0.4);
 }
 
 .dropdown-1 {
@@ -564,6 +590,12 @@ html {
 
 .nav-btn:hover {
     transform: translateY(-0.2rem);
+}
+
+.sticky .nav-btn {
+    background: linear-gradient(to right, #ff45b9, #ff3598);
+    box-shadow: none;
+    color: #fff;
 }
 /* End of Nav Items */
  
