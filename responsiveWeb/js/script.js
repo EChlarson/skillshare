@@ -1,3 +1,4 @@
+//Sticky Navigation Bar
 const navbar = document.querySelector('.navbar')
 
 window.addEventListener("scroll",()=>{
