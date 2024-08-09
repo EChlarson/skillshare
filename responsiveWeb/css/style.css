@@ -982,6 +982,18 @@ header{
     position: relative;
 }
 
+.templates::before {
+    content: "";
+    width: 80rem;
+    height: 80rem;
+    background: linear-gradient(to bottom, transparent, #8430ea, #8430ea);
+    z-index: 3;
+    position: absolute;
+    bottom: -5%;
+    right: 10%;
+    filter: blur(7rem);
+}
+
 .templates-left {
     width: 50%;
     position: absolute;
@@ -1074,6 +1086,39 @@ header{
 .play-btn {
     width: 20rem;
     height: 20rem;
+    background-color: #fff;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 1rem 10rem rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.play-btn:hover {
+    transform: scale(1.2);
+}
+
+.play-btn::before {
+    content: "";
+    width: 26rem;
+    height: 26rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    box-shadow: 0 1rem 10rem rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+}
+
+.play-btn:hover::before {
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.play-btn i {
+    font-size: 7rem;
+    color: #20252c;
 }
 /* End of Templates */
 /* End of Container */
