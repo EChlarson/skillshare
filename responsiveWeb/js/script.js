@@ -20,15 +20,15 @@ filterLinks.forEach((filterLink)=>{
         document.querySelector(".filter-nav-link.active").classList.remove("active")
         filterLink.classList.add("active")
 
-        const projects = document.querySelectorAll(".projects")
+        const projects = document.querySelectorAll(".project")
         projects.forEach((project)=>{
             project.classList.add('hide')
+
+            if(filterLink.getAttribute('data-type') === project.getAttribute('data-type') || filterLink.getAttribute('data-type') === 'all'
+            ){
+            project.classList.remove('hide')
+            }
         })
-
-        if(filterLink.getAttribute("date-type") === project.getAttribute("data-type")|| filterLink.getAttribute("data-type")==="all"){
-            project.classList.remove("hide")
-        }
-
     })
 })
 //End of Projects
