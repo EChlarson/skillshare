@@ -1179,7 +1179,7 @@ header{
 }
 
 .progress-bar {
-    width: 50%;
+    width: 0;
     height: 100%;
     background-color: #2289ff;
     position: relative;
@@ -1193,7 +1193,7 @@ header{
     background-color: #2289ff;
     position: absolute;
     top: 50%;
-    right: 0;
+    right: -1.3rem;
     transform: translateY(-50%);
 }
 
@@ -1260,6 +1260,15 @@ header{
     left: -4rem;
     background-color: #fff;
     border-radius: 0.4rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s ease;
+    z-index: 10;
+}
+
+.speed-options.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 .speed-options div {
