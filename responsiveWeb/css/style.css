@@ -622,7 +622,7 @@ header{
     font-family: "mooli", cursive;
     font-size: 13rem;
     color: #fff;
-    text-shadow: 0 1rem 3 rem rgba(0,0,0,0.3);
+    text-shadow: 0 1rem 3rem rgba(0,0,0,0.3);
 }
  
 .banner h3 {
@@ -630,7 +630,7 @@ header{
     font-weight: 300;
     text-transform: uppercase;
     color: #fff;
-    text-shadow: 0 1rem 3 rem rgba(0,0,0,0.1);
+    text-shadow: 0 1rem 3rem rgba(0,0,0,0.1);
     margin: 0 0 3rem 1rem;
 }
  
@@ -645,7 +645,7 @@ header{
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     color: #fff;
-    box-shadow: 0 1rem 3 rem rgba(0,0,0,0.1);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.1);
     margin-left: 1rem;
     cursor: pointer;
     transition: transform0.3s;
@@ -1133,6 +1133,14 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+}
+
+.video-container.show-video {
+    opacity: 1;
+    visibility: visible;
 }
 
 .video {
@@ -1156,6 +1164,7 @@ header{
     bottom: -5.5rem;
     opacity: 0;
     visibility: hidden;
+    z-index: 10;
     transition: all 0.08s ease;
 }
 
@@ -1183,7 +1192,7 @@ header{
     top: -3rem;
     left: 50%;
     transform: translateX(-50%);
-    color: #fff;
+    color: #333;
     font-size: 2rem;
 }
 

@@ -50,11 +50,22 @@ const fullscreenBtn = document.querySelector(".fullscreen i")
 const videoTimeline = document.querySelector(".video-timeline")
 const currentVidTime = document.querySelector(".current-time")
 const videoDuration = document.querySelector(".video-duration")
+const playButton = document.querySelector(".play-btn")
+const xButton = document.querySelector(".x-btn i")
 let timer 
+
+playButton.addEventListener("click", ()=>{
+    videoContainer.classList.add("show-video")
+})
+
+xButton.addEventListener("click", ()=>{
+    videoContainer.classList.remove("show-video")
+    mainVideo.pause()
+})
 
     //Controls
 const hideControls = ()=>{
-    if(mainVideo.paused)return
+    if(mainVideo.paused) return
     timer = setTimeout(()=>{
         videoContainer.classList.remove("show-controls")
     }, 3000)
