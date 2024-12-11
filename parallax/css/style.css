@@ -1,0 +1,16 @@
+body {
+   margin: 0;
+   overflow: hidden;
+ }
+ 
+ .parallax-item {
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ 
+ .parallax-item img {
+   max-width: 120%;
+   max-height: 120%;
+ }
