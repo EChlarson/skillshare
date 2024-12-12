@@ -7,6 +7,9 @@
    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+
+   <button id="control-button">Start</button>
+
    <!--Place items in list starting at the furthest and moving closer.-->
    <div class="parallax-item" data-depth="0.7">
       <img src="../img/parallaxBackground-02.png" alt="Night Sky">
@@ -20,10 +23,12 @@
       <img src="../img/parallaxMiddle-02.png" alt="Trees">
    </div>
 
-   <div class="parallax-item" data-depth="0.1">
-      <img src="../img/parallaxTop-02-02.png" alt="Time Machine">
+   <div class="parallax-item tm" data-depth="0.1">
+      <img id="tm" src="../img/parallaxTop-02-02.png" alt="Time Machine">
    </div>
 
    <script src="../js/parallax.js"></script>
+   <script src="../js/buttonTransition.js"></script>
+
 </body>
 </html>

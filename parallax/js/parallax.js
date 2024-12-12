@@ -16,8 +16,8 @@ input.mouseX.range = input.mouseX.end - input.mouseX.start;
 //Output Setup
 var output = {
   x: {
-    start: -150,
-    end: 150,
+    start: -20,
+    end: 20,
     current: 0,
   },
   zIndex: {
@@ -25,7 +25,7 @@ var output = {
   },
   blur: {
     startingDepth: .2,
-    range: 8
+    range: 2
   }
 };
  
@@ -55,7 +55,7 @@ var updateEachParallaxItem = function() {
       zIndex: output.zIndex.range - (output.zIndex.range*depth),
       blur: (depth - output.blur.startingDepth) * output.blur.range
     };
-    console.log(k, "depth", depth)
+    
     item.style.filter = 'blur('+itemOutput.blur+'px)'
     item.style.zIndex = itemOutput.zIndex;
     item.style.transform = 'translate('+itemOutput.x+'px)';
